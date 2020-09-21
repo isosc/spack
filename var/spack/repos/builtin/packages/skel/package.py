@@ -24,29 +24,19 @@ from spack import *
 
 
 class Skel(PythonPackage):
-    """FIXME: Put a proper description of your package here."""
+    """Skel provides a command line tool that supports instantiation of templates with models."""
 
-    # FIXME: Add a proper url for your package's homepage here.
-    homepage = "https://www.example.com"
+    homepage = "https://github.com/isosc/skel-core"
     git      = "https://github.com/isosc/skel-core.git"
 
-    # FIXME: Add a list of GitHub accounts to
+    # A list of GitHub accounts to
     # notify when the package is updated.
-    # maintainers = ['github_user1', 'github_user2']
+    maintainers = ['isosc']
 
-    # FIXME: Add proper versions and checksums here.
     version('develop')
 
-    # FIXME: Add dependencies if required. Only add the python dependency
-    # if you need specific versions. A generic python dependency is
-    # added implicity by the PythonPackage class.
+    # Dependencies
     depends_on('python@3:', type=('build', 'run'))
     depends_on('py-setuptools', type='build')
     depends_on('py-cheetah3',        type=('build', 'run'))
-
-    def build_args(self, spec, prefix):
-        # FIXME: Add arguments other than --prefix
-        # FIXME: If not needed delete this function
-        args = []
-        return args
 
